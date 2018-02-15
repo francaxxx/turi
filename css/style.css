@@ -1,0 +1,734 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300");
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300");
+/* variabili */
+body {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  color: black;
+  font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on; }
+
+.logotipo {
+  margin-top: 10px;
+  width: 100%;
+  height: 40px; }
+
+#menu-btn {
+  text-align: end;
+  padding-right: 15px; }
+  #menu-btn svg {
+    margin-top: 25px;
+    margin-left: 10px; }
+
+#menu {
+  margin: 0 auto; }
+  #menu li {
+    padding-top: 30px;
+    float: left;
+    background: #F35553;
+    list-style: none;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    margin-top: .5%; }
+  #menu ul {
+    height: 60px;
+    margin-left: -16%;
+    /*Cursor and text undelrine on hover*/
+    /*Background and text colour change on click*/ }
+    #menu ul a li:hover {
+      cursor: pointer; }
+    #menu ul a:active {
+      background-color: #efefef;
+      color: #F35553;
+      border-bottom: 2px solid #F35553; }
+  #menu #item2 {
+    margin-left: .2%;
+    width: 49.8%;
+    height: 60px; }
+  #menu #item1 {
+    width: 50%;
+    height: 60px; }
+
+.nav {
+  width: 100%;
+  height: 60px;
+  background-color: #F35553;
+  position: fixed;
+  z-index: 1; }
+  .nav li {
+    font-weight: lighter; }
+  .nav .border svg {
+    vertical-align: middle;
+    margin: 25px; }
+  .nav .border a {
+    color: white;
+    text-decoration: none;
+    text-align: left; }
+  .nav .border .row {
+    margin: 0 !important; }
+  .nav .outer-menu .checkbox-toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    opacity: 0; }
+  .nav .outer-menu .hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 0.5em 1em;
+    background: #F35553;
+    border-radius: 0 0.12em 0.12em 0;
+    cursor: pointer;
+    -webkit-transition: -webkit-box-shadow 0.4s ease;
+    transition: -webkit-box-shadow 0.4s ease;
+    transition: box-shadow 0.4s ease;
+    transition: box-shadow 0.4s ease, -webkit-box-shadow 0.4s ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .nav .outer-menu .hamburger > div {
+    position: relative;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+    width: 100%;
+    height: 2px;
+    background: #efefef;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .nav .outer-menu .hamburger > div:before,
+  .nav .outer-menu .hamburger > div:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
+  .nav .outer-menu .hamburger > div:after {
+    top: 10px; }
+  .nav .outer-menu .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    outline: 1px solid transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .nav .outer-menu .menu > div {
+    width: 200vw;
+    height: 200vw;
+    color: #efefef;
+    background: #F35553;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .nav .outer-menu .menu > div > div {
+    max-height: 100vh;
+    opacity: 0;
+    -webkit-transition: opacity 0.4s ease;
+    transition: opacity 0.4s ease;
+    overflow-y: auto;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+    display: -ms-flexbox;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .nav .outer-menu .menu > div > div > ul {
+    list-style: none;
+    padding: 0 1em;
+    margin: 0;
+    display: block;
+    max-height: 100vh; }
+  .nav .outer-menu .menu > div > div > ul > li {
+    padding: 0;
+    margin: 1em;
+    font-size: 24px;
+    display: block; }
+  .nav .outer-menu .menu > div > div > ul > li > a {
+    position: relative;
+    display: inline;
+    cursor: pointer;
+    -webkit-transition: color 0.4s ease;
+    transition: color 0.4s ease; }
+  .nav .outer-menu .menu > div > div > ul > li > a:hover {
+    color: #efefef; }
+  .nav .outer-menu .menu > div > div > ul > li > a:hover:after {
+    width: 100%; }
+  .nav .outer-menu .checkbox-toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    opacity: 0; }
+  .nav .outer-menu *:checked + .hamburger > div {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg); }
+  .nav .outer-menu *:checked + .hamburger > div:before,
+  .nav .outer-menu *:checked + .hamburger > div:after {
+    top: 0;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  .nav .outer-menu *:checked + .hamburger > div:after {
+    opacity: 0; }
+  .nav .outer-menu *:checked ~ .menu {
+    pointer-events: auto;
+    visibility: visible; }
+  .nav .outer-menu *:checked ~ .menu > div {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition-duration: 0.75s;
+    transition-duration: 0.75s; }
+  .nav .outer-menu *:checked ~ .menu > div > div {
+    opacity: 1;
+    -webkit-transition: opacity 0.4s ease 0.4s;
+    transition: opacity 0.4s ease 0.4s; }
+
+.container.no-padding {
+  padding-right: 0px;
+  padding-left: 0px; }
+
+.titolo h1 {
+  /* Ciao ‘mbare!: */
+  font-family: Avenir-Black;
+  font-size: 22px;
+  color: black;
+  letter-spacing: 0;
+  line-height: 20px; }
+
+p.titolino {
+  font-size: 12px;
+  color: black;
+  letter-spacing: 0;
+  line-height: 20px; }
+
+/* button - big: */
+.button1 {
+  background: #53AAF3;
+  border-radius: 49px;
+  width: 100%;
+  font-size: 15px;
+  color: white;
+  letter-spacing: 0;
+  line-height: 15px;
+  padding: 10px 16px;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent; }
+
+/* button 2 - big: */
+.button2 {
+  background: #F35553;
+  border-radius: 49px;
+  width: 100%;
+  font-size: 15px;
+  margin-bottom: 15px;
+  color: white;
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-top: 5%;
+  padding: 10px 16px;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent; }
+
+/* Map Page */
+iframe.margin-top {
+  margin-top: 60px;
+  width: 100%; }
+
+.prova {
+  width: 100%;
+  height: 8vh;
+  background-color: #BE2525;
+  margin-top: 60px;
+  margin-bottom: 35px; }
+  .prova h2 {
+    font-size: 3vh;
+    padding: 2.5vh;
+    color: white;
+    font-weight: bold;
+    text-align: center; }
+
+.small-button {
+  padding: 15px;
+  background: #BE2525;
+  border-radius: 28px;
+  width: 100%;
+  height: 60px;
+  margin-left: -20px;
+  color: white;
+  text-decoration: none; }
+
+h5.nomePercorso {
+  margin-left: 3vh;
+  margin-top: 0px;
+  font-size: 3vh; }
+
+sub {
+  margin: 3vh; }
+
+p.testo {
+  margin-top: 3vh;
+  padding-left: 5vh;
+  padding-right: 5vh;
+  padding-bottom: 5vh;
+  line-height: 6vh; }
+
+img {
+  width: 100%;
+  height: auto;
+  margin-top: 15px; }
+
+.margin-right {
+  margin-left: 15vh; }
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5vh; }
+
+/* Primo itinerario */
+.title {
+  font-weight: bold;
+  color: black;
+  position: relative;
+  top: 8px;
+  font-size: 1.2em;
+  padding: 0 0 0 70px; }
+
+.list {
+  width: 100%;
+  border-bottom: 1px solid #BE2525;
+  border-radius: 10px;
+  box-sizing: border-box;
+  position: relative;
+  font-size: .8em;
+  font-weight: lighter;
+  cursor: pointer; }
+  .list img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -4px;
+    margin-top: -2px; }
+  .list ul {
+    transition: all ease 1s;
+    max-height: 0px;
+    overflow: hidden;
+    padding: 0;
+    line-height: 3vh; }
+  .list ul.open {
+    max-height: 300px;
+    padding: 20px 35px 0px 90px; }
+  .list ul li:first-child {
+    margin-top: 15px; }
+  .list .list:not(:first-child) {
+    margin-top: 5px; }
+  .list .list li {
+    height: 30px; }
+
+.icon {
+  position: absolute;
+  width: 30px;
+  left: 95%;
+  top: 1vh;
+  bottom: 10px;
+  background: #BE2525;
+  border-radius: 73px;
+  height: 30px;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: bold;
+  content: inherit; }
+
+.spazio {
+  width: 20px;
+  height: 60px; }
+
+.mySlides {
+  display: none; }
+
+/* Itinerari page */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+.btn {
+  background-color: #F35553;
+  border: 1px solid #efefef;
+  color: white;
+  padding: 0.5rem; }
+
+.btn--block {
+  display: block;
+  width: 100%; }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.cards__item {
+  display: flex;
+  padding: 1rem; }
+  @media (min-width: 40rem) {
+    .cards__item {
+      width: 50%; } }
+  @media (min-width: 56rem) {
+    .cards__item {
+      width: 33.3333%; } }
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; }
+  .card:hover .card__image {
+    filter: contrast(100%); }
+
+.card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem; }
+
+.card__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  filter: contrast(70%);
+  overflow: hidden;
+  position: relative;
+  transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91); }
+  .card__image::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%; }
+  @media (min-width: 40rem) {
+    .card__image::before {
+      padding-top: 66.6%; } }
+
+.card__image--flowers {
+  background-image: url(https://www.francescabarbagallo.com/wp-content/uploads/2018/02/percorso4-1.jpg); }
+
+.card__image--river {
+  background-image: url(https://www.francescabarbagallo.com/wp-content/uploads/2018/02/percorso2.jpg); }
+
+.card__image--record {
+  background-image: url(https://www.francescabarbagallo.com/wp-content/uploads/2018/02/percorso1.jpg); }
+
+.card__image--fence {
+  background-image: url(https://www.francescabarbagallo.com/wp-content/uploads/2018/02/percorso3.jpg); }
+
+.card__title {
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase; }
+
+.card__text {
+  flex: 1 1 auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  margin-top: 1.25rem; }
+
+section nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  list-style: none; }
+section nav li {
+  float: left;
+  width: 39px;
+  height: 39px;
+  background-color: #F35553;
+  border-radius: 100px;
+  text-align: center;
+  font-size: 2.5vh;
+  line-height: 39px;
+  color: white; }
+
+.setting {
+  text-align: center;
+  margin-top: 10vh; }
+
+.flag nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  list-style: none; }
+.flag nav li {
+  float: left; }
+.flag input {
+  display: none; }
+.flag input:checked {
+  border: 10px solid #F35553; }
+
+.bottom h6 {
+  position: fixed;
+  bottom: 0px;
+  height: 20px;
+  width: 100%;
+  text-align: center;
+  margin-top: 1vh; }
+
+h5 {
+  font-size: 2.5vh; }
+
+/* itineraario map */
+*,
+*:after,
+*:before {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
+
+.map {
+  width: 100%; }
+
+.map__frame {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  cursor: pointer; }
+
+/* Google Map (static) */
+.map__frame img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%; }
+
+/* Google Map (dynamic) */
+.gm-style {
+  width: 100%;
+  min-height: 300px; }
+
+/* Google Map (dynamic) - info window */
+.gm-style-iw {
+  font-size: 12px;
+  line-height: 18px; }
+
+.map__print,
+.map__legend {
+  display: none; }
+
+.map__frame + .map__legend {
+  display: block;
+  height: 240px;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  font-size: 12px;
+  line-height: 18px; }
+
+.map__title,
+.map__address,
+.map__description {
+  display: block;
+  color: #000; }
+
+.map__title {
+  margin: 0;
+  font-weight: bold;
+  font-size: 14px; }
+
+.map__address {
+  margin: 0 0 10px;
+  font-weight: bold; }
+
+.map__legend ul {
+  margin: 0;
+  padding: 0; }
+
+.map__legend ul li {
+  position: relative;
+  width: 100%;
+  padding: 12px 10px 11px 38px;
+  border-bottom: 1px solid #d0d0d0; }
+
+.map__marker {
+  position: absolute;
+  left: 10px;
+  top: 13px;
+  width: 19px;
+  height: 28px;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center; }
+
+@media only screen and (min-width: 768px) {
+  .map {
+    width: 100%;
+    height: 500px; }
+
+  .map__legend {
+    display: block;
+    width: 192px;
+    height: auto;
+    overflow-y: auto;
+    padding: 5px 10px;
+    margin: 0 0 5px;
+    background: #fff;
+    color: #444;
+    line-height: 25px;
+    border: 1px solid #bbb; }
+
+  .map > .map__legend {
+    display: none; }
+
+  .map__legend strong {
+    color: #000; }
+
+  .map__legend a {
+    color: #000; }
+
+  .map__legend a:hover {
+    color: #F35553; }
+
+  .map__frame {
+    background: white; }
+
+  .map__frame + .map__legend {
+    display: none; }
+
+  .map__print {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    z-index: 1;
+    display: inline-block;
+    padding: 6px 12px;
+    background: #F35553;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase; } }
+
+/*# sourceMappingURL=style.css.map */

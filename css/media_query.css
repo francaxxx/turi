@@ -1,0 +1,66 @@
+
+@media screen and (max-width: 1450px) {
+    .small-button {
+    margin-left: 30vh;
+    }
+    .icon {
+      left: 98%;
+    }
+}
+@media screen and (max-width: 1199px) {
+  .small-button {
+    margin-left: 25vh;
+  }
+}
+@media screen and (max-width:992px){
+  .small-button {
+  margin-left: 15vh;
+  }
+  .icon {
+    left: 96%;
+  }
+}
+
+@media screen and (max-width:680px){
+  .small-button {
+  margin-left: 8vh;
+  }
+}
+
+  @media screen and (max-width:520px){
+    .small-button {
+    margin-left: 1vh;
+    padding: 9px;
+
+  }
+
+}
+
+
+@media screen and (max-width:394px){
+  .small-button {
+    margin-left: -2vh;
+    }
+
+    prova {
+    margin-bottom: 30px;
+}
+p.testo {
+  line-height: 5vh;
+}
+.icon {
+  left: 92%;
+}
+}
+@media screen and (max-width:330px){
+  .small-button {
+    margin-left: -6vh;
+    }
+
+  .icon {
+    left: 90%;
+  }
+  .prova h2 {
+    font-size: 2.5vh;
+  }
+}
